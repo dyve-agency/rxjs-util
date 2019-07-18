@@ -1,8 +1,8 @@
 {
   "name": "@zeit-dev/rxjs-util",
   "version": "1.0.0",
-  "main": "index.js",
   "repository": "https://github.com/cice/rxjs-util",
+  "description": "Utility classes, functions we commonly use across angular projects.",
   "author": "Marian Theisen <marian@cice-online.net>",
   "license": "MIT",
   "private": false,
@@ -25,7 +25,6 @@
         "lodash-es": "lodash"
       }
     }
-
   },
   "scripts": {
     "build": "ng-packagr -p package.json"
