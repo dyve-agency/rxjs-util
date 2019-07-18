@@ -27,7 +27,8 @@
     }
   },
   "scripts": {
-    "build": "ng-packagr -p package.json"
+    "build": "ng-packagr -p package.json",
+    "publish-dist": "yarn publish dist --access public"
   },
   "peerDependencies": {
     "lodash-es": "^4.17.14",
