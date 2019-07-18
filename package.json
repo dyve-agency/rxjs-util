@@ -1,0 +1,37 @@
+{
+  "name": "@zeit-dev/rxjs-util",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/cice/rxjs-util",
+  "author": "Marian Theisen <marian@cice-online.net>",
+  "license": "MIT",
+  "private": false,
+  "$schema": "./node_modules/ng-packagr/package.schema.json",
+  "devDependencies": {
+    "@angular/compiler": "^8.1.2",
+    "@angular/compiler-cli": "^8.1.2",
+    "@angular/core": "^8.1.2",
+    "@types/lodash-es": "^4.17.3",
+    "lodash-es": "^4.17.14",
+    "ng-packagr": "^5.3.0",
+    "rxjs": "^6.5.2",
+    "tslib": "^1.9.0",
+    "typescript": ">=3.4 <3.5"
+  },
+  "ngPackage": {
+    "lib": {
+      "entryFile": "lib/public-api.ts",
+      "umdModuleIds": {
+        "lodash-es": "lodash"
+      }
+    }
+
+  },
+  "scripts": {
+    "build": "ng-packagr -p package.json"
+  },
+  "peerDependencies": {
+    "lodash-es": "^4.17.14",
+    "rxjs": "^6.5.2"
+  }
+}
