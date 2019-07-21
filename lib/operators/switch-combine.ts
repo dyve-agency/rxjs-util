@@ -1,3 +1,7 @@
+/**
+ * @module Operators
+ */
+
 import {Observable, OperatorFunction} from 'rxjs';
 import {map, switchMap} from 'rxjs/operators';
 

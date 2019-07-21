@@ -1,3 +1,7 @@
+/**
+ * @module Operators
+ */
+
 import {NgZone} from '@angular/core';
 import {Observable, pipe} from 'rxjs';
 import {catchError, switchMap} from 'rxjs/operators';

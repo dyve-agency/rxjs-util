@@ -1,3 +1,7 @@
+/**
+ * @module Operators
+ */
+
 import {every} from 'lodash-es';
 import {combineLatest, Observable} from 'rxjs';
 import {map} from 'rxjs/operators';

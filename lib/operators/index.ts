@@ -1,3 +1,7 @@
+/**
+ * @hidden
+ */
+
 export * from './all-true';
 export * from './filter-truthy';
 export * from './flip';

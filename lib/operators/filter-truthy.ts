@@ -1,3 +1,7 @@
+/**
+ * @module Operators
+ */
+
 import {OperatorFunction, pipe} from 'rxjs';
 import {filter} from 'rxjs/operators';
 

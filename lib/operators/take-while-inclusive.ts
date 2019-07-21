@@ -1,3 +1,7 @@
+/**
+ * @module Operators
+ */
+
 import {of, OperatorFunction, pipe} from 'rxjs';
 import {concatMap, takeWhile} from 'rxjs/operators';
 

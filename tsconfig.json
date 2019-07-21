@@ -15,7 +15,8 @@
       "node_modules/@types"
     ],
     "lib": [
-      "es2018"
+      "es2018",
+      "dom"
     ],
     "strict": true,
     "paths": {
@@ -24,5 +25,10 @@
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true
+  },
+  "files": ["lib/public-api.ts"],
+  "typedocOptions": {
+    "mode": "modules",
+    "out": "docs"
   }
 }

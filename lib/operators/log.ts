@@ -1,3 +1,7 @@
+/**
+ * @module Operators
+ */
+
 import {OperatorFunction} from 'rxjs';
 import {tap} from 'rxjs/operators';
 
