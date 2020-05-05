@@ -10,6 +10,11 @@ export function allTrue(...inputs: Array<Observable<boolean>>): Observable<boole
     ...inputs,
   )
     .pipe(
-      map((values: boolean[]) => !values.find((val) => !val)),
+      map((values: boolean[]) => {
+        for (let val of values) {
+          if (!val) return false;
+        }
+        return true;
+      }),
     );
 }

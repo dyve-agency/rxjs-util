@@ -1,9 +1,9 @@
 {
   "name": "@zeit-dev/rxjs-util",
   "version": "1.0.0",
-  "repository": "https://github.com/cice/rxjs-util",
+  "repository": "https://github.com/zeitdev/rxjs-util",
   "description": "Utility classes, functions we commonly use across angular projects.",
-  "author": "Marian Theisen <marian@cice-online.net>",
+  "author": "Marian Theisen <mt@zeit.dev>",
   "license": "MIT",
   "private": false,
   "$schema": "./node_modules/ng-packagr/package.schema.json",
@@ -11,12 +11,18 @@
     "@angular/compiler": ">= 8.0.0 < 10.0",
     "@angular/compiler-cli": ">= 8.0.0 < 10.0",
     "@angular/core": ">= 8.0.0 < 10.0",
+    "@types/jest": "^25.2.1",
+    "@types/node": "^13.13.4",
+    "jest": ">=25 <26",
+    "jest-marbles": "^2.5.1",
     "ng-packagr": "^9.1.0",
     "rxjs": ">= 6.5.0",
+    "ts-jest": "^25.4.0",
     "tslib": "^1.11.1",
     "typedoc": "^0.17.6",
     "typedoc-plugin-external-module-name": "^3.1.0",
-    "typescript": ">=3.4 <3.8"
+    "typescript": ">=3.4 <3.9",
+    "zone.js": "~0.10.3"
   },
   "ngPackage": {
     "lib": {
@@ -26,9 +32,11 @@
   "scripts": {
     "build": "ng-packagr -p package.json",
     "publish-dist": "yarn publish dist --access public",
-    "doc": "typedoc --out docs lib"
+    "doc": "typedoc --out docs lib",
+    "test": "jest"
   },
   "peerDependencies": {
+    "@angular/core": ">= 8.0.0 < 10.0",
     "rxjs": ">= 6.5.0"
   }
 }
