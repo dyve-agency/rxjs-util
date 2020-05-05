@@ -2,7 +2,6 @@
  * @module Operators
  */
 
-import {every} from 'lodash-es';
 import {combineLatest, Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 
@@ -11,6 +10,6 @@ export function allTrue(...inputs: Array<Observable<boolean>>): Observable<boole
     ...inputs,
   )
     .pipe(
-      map((values: boolean[]) => every(values)),
+      map((values: boolean[]) => !values.find((val) => !val)),
     );
 }
