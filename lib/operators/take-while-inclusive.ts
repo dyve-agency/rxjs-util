@@ -14,10 +14,13 @@ export function takeWhileInclusive<T>(predicate: (val: T) => boolean): OperatorF
   return pipe(
     concatMap((val) => {
       if (!predicate(val)) {
+        // If the stopping condition matches, insert a marker after
+        // the matched event.
         return of(val, marker as T);
       }
       return of(val);
     }),
+    // takeWhile will stop when it sees the marker and ditch it.
     takeWhile((val) => val !== marker),
   );
 }
