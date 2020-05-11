@@ -1,9 +1,9 @@
 import {cold, hot} from 'jest-marbles';
 import {allTrue} from '../../lib/operators';
+import {bools} from '../helpers';
 
 describe('operators/all-true', () => {
-  const bools = {t: true, f: false};
-  
+
   it('should return true if all input observables are true', () => {
     const input = [
       hot('t', bools),
