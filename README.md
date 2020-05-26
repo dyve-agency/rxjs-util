@@ -34,7 +34,7 @@ all latest values are `true`, `false` otherwise.
   // => false
 ``` 
 
-### [[filterTruthy]] 
+### filterTruthy
 
 This is basically just `filter(x => !!x)` with the 
 added benefit of collapsing an input type of `T | undefined` to just `T`
@@ -44,7 +44,7 @@ added benefit of collapsing an input type of `T | undefined` to just `T`
   // => true, true, 'a', 1
 ``` 
 
-### [[flip]] 
+### flip
 
 Just a shortcut for `map(x => !x)`
 
@@ -53,7 +53,7 @@ Just a shortcut for `map(x => !x)`
   // => false
 ``` 
 
-### [[log]] 
+### log
 
 This is a debug tool, that `tap`s into the observable stream,
 and uses `console.log` to output each event, and `console.error` for
@@ -64,16 +64,16 @@ errors. To identify the log output, you can specify a log category/tag:
   // => Here 1, Here 2, Here 3
 ``` 
 
-### [[mapVoid]]
+### mapVoid
 
 Casts observable to `Observable<void>`.
 
-### [[replayWhile]]
+### replayWhile
 
 Replays the last value every n miliseconds until the next value arrives.
 Stops replaying when predicate evaluates to false.
 
-### [[returnToZone]]
+### returnToZone
 
 Helper to return to the Angular zone (`NgZone`), when an event arrives.
 Useful if you have external async sources.
@@ -83,7 +83,7 @@ Useful if you have external async sources.
   from(someExternalPromise).pipe(returnToZone(ngZone))
 ```
 
-### [[switchCombine]]
+### switchCombine
 
 `SwitchMap` to an inner observable and carry the current value into the output.
 Same as
@@ -92,6 +92,6 @@ Same as
   switchMap((x) => innerObservable.pipe(map((y) => [x, y])))
 ```
 
-### [[takeWhileInclusive]]
+### takeWhileInclusive
 
 Same as `takeWhile` but emits the last event as well.
