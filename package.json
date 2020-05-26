@@ -1,40 +1,42 @@
 {
   "name": "@zeit-dev/rxjs-util",
   "version": "1.0.0",
-  "repository": "https://github.com/cice/rxjs-util",
+  "repository": "https://github.com/zeitdev/rxjs-util",
   "description": "Utility classes, functions we commonly use across angular projects.",
-  "author": "Marian Theisen <marian@cice-online.net>",
+  "author": "Marian Theisen <mt@zeit.dev>",
   "license": "MIT",
   "private": false,
   "$schema": "./node_modules/ng-packagr/package.schema.json",
   "devDependencies": {
-    "@angular/common": "^8.1.2",
-    "@angular/compiler": "^8.1.2",
-    "@angular/compiler-cli": "^8.1.2",
-    "@angular/core": "^8.1.2",
-    "@types/lodash-es": "^4.17.3",
-    "lodash-es": "^4.17.14",
-    "ng-packagr": "^5.3.0",
-    "rxjs": "^6.5.2",
-    "tslib": "^1.9.0",
-    "typedoc": "^0.14.2",
-    "typedoc-plugin-external-module-name": "^2.1.0",
-    "typescript": ">=3.4 <3.5"
+    "@angular/compiler": ">= 8.0.0 < 10.0",
+    "@angular/compiler-cli": ">= 8.0.0 < 10.0",
+    "@angular/core": ">= 8.0.0 < 10.0",
+    "@types/jest": "^25.2.1",
+    "@types/node": "^13.13.4",
+    "jest": "^26.0.0",
+    "jest-marbles": "^2.5.1",
+    "ng-packagr": "^9.1.0",
+    "rxjs": ">= 6.5.0",
+    "ts-jest": "^26.0.0",
+    "tslib": "^1.10.0",
+    "typedoc": "^0.17.7",
+    "typedoc-plugin-external-module-name": "^3.1.0",
+    "typescript": ">=3.4 <3.9",
+    "zone.js": "~0.10.3"
   },
   "ngPackage": {
     "lib": {
-      "entryFile": "lib/public-api.ts",
-      "umdModuleIds": {
-        "lodash-es": "lodash"
-      }
+      "entryFile": "lib/public-api.ts"
     }
   },
   "scripts": {
     "build": "ng-packagr -p package.json",
-    "publish-dist": "yarn publish dist --access public"
+    "publish-dist": "yarn publish dist --access public",
+    "doc": "typedoc --out docs lib",
+    "test": "jest"
   },
   "peerDependencies": {
-    "lodash-es": "^4.17.14",
-    "rxjs": "^6.5.2"
+    "@angular/core": ">= 8.0.0 < 10.0",
+    "rxjs": ">= 6.5.0"
   }
 }

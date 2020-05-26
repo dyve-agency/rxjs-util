@@ -1,8 +1,8 @@
-/**
+/** @packageDocumentation
  * @module Operators
  */
 
-import {interval, of, OperatorFunction} from 'rxjs';
+import {interval, of, OperatorFunction, SchedulerLike} from 'rxjs';
 import {map, switchMap} from 'rxjs/operators';
 
 /**
@@ -10,11 +10,13 @@ import {map, switchMap} from 'rxjs/operators';
  * Stops replaying when predicate evaluates to false.
  * @param predicate
  * @param period
+ * @param scheduler
  */
-export function replayWhile<T>(predicate: (val: T) => boolean, period: number): OperatorFunction<T, T> {
+export function replayWhile<T>(predicate: (val: T) => boolean, period: number, scheduler?: SchedulerLike): OperatorFunction<T, T> {
   return switchMap((val) => {
     if (predicate(val)) {
-      return interval(period)
+      // TODO: re-emit directly? (interval takes 1 period for the 1st event)
+      return interval(period, scheduler)
         .pipe(map(() => val));
     }
     return of(val);
