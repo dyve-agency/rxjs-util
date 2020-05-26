@@ -1,8 +1,14 @@
 # @zeit-dev/rxjs-util
-![npm](https://img.shields.io/npm/v/@zeit-dev/rxjs-util)
+![size](https://badgen.net/bundlephobia/minzip/@zeit-dev/rxjs-util)
+![npm](https://badgen.net/npm/v/@zeit-dev/rxjs-util)
+![license](https://badgen.net/npm/license/@zeit-dev/rxjs-util)
+![github](https://badgen.net/github/checks/zeitdev/rxjs-util)
+![codeclimate](https://badgen.net/codeclimate/maintainability/zeitdev/rxjs-util)
+![coverage](https://badgen.net/codeclimate/coverage/zeitdev/rxjs-util)
+
 
 This is a small and incoherent collection of RxJS operators we commonly
-commonly use across our projects.
+use across our projects.
 
 ## Installation
 

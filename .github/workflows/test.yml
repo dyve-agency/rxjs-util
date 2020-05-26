@@ -20,4 +20,10 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-
       - run: yarn install --frozen-lockfile
-      - run: yarn test
+      - name: Test & publish code coverage
+        uses: paambaati/codeclimate-action@v2.6.0
+        env:
+          CC_TEST_REPORTER_ID: {{ secrets.CODECLIMATE_TEST_REPORTER_ID }}
+        with:
+          coverageCommand: yarn test --collect-coverage
+          debug: true
