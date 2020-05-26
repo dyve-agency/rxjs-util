@@ -1,4 +1,5 @@
 # @zeit-dev/rxjs-util
+![npm](https://img.shields.io/npm/v/@zeit-dev/rxjs-util)
 
 This is a small and incoherent collection of RxJS operators we commonly
 commonly use across our projects.
