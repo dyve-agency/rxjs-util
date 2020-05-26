@@ -22,7 +22,9 @@ yarn add @zeit-dev/rxjs-util
 
 ## Operators
 
-### [[allTrue]]
+[Complete documentation here](https://zeitdev.github.io/rxjs-util/modules/operators.html)
+
+### allTrue
 
 Combine several boolean observables, and return `true` if 
 all latest values are `true`, `false` otherwise.
