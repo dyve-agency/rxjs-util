@@ -31,8 +31,8 @@ This is basically just `filter(x => !!x)` with the
 added benefit of collapsing an input type of `T | undefined` to just `T`
 
 ```typescript
-  of(true, false, true).pipe(flipTruthy()).subscribe((x) => console.log(x));
-  // => true, true
+  of(true, false, '', 0, null, undefined, true, 'a', 1).pipe(filterTruthy()).subscribe((x) => console.log(x));
+  // => true, true, 'a', 1
 ``` 
 
 ### [[flip]] 
