@@ -34,7 +34,7 @@
     "doc": "typedoc --out docs lib",
     "test": "jest",
     "preversion": "yarn test",
-    "postversion": "yarn build && git push --tags && yarn publish dist --access public --tag $npm_package_version && git push && echo \"Successfully released version $npm_package_version!\""
+    "postversion": "yarn build && git push --tags && yarn publish dist --non-interactive --access public --tag $npm_package_version && git push && echo \"Successfully released version $npm_package_version!\""
   },
   "peerDependencies": {
     "@angular/core": ">= 8.0.0 < 10.0",
