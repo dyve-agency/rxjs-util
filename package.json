@@ -15,7 +15,7 @@
     "@types/node": "^13.13.4",
     "jest": "^26.0.0",
     "jest-marbles": "^2.5.1",
-    "ng-packagr": "^9.1.0",
+    "ng-packagr": "^10.1.1",
     "rxjs": ">= 6.5.0",
     "ts-jest": "^26.0.0",
     "tslib": "^1.10.0",
