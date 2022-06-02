@@ -10,7 +10,7 @@
   "devDependencies": {
     "@angular/compiler": ">= 8.0.0 < 10.0",
     "@angular/compiler-cli": ">= 8.0.0 < 10.0",
-    "@angular/core": ">= 8.0.0 < 10.0",
+    "@angular/core": ">= 8.0.0 < 12.0",
     "@types/jest": "^25.2.1",
     "@types/node": "^13.13.4",
     "jest": "^26.0.0",
@@ -37,7 +37,7 @@
     "postversion": "yarn build && git push --tags && yarn publish dist --non-interactive --access public --tag latest && git push && echo \"Successfully released version $npm_package_version!\""
   },
   "peerDependencies": {
-    "@angular/core": ">= 8.0.0 < 10.0",
+    "@angular/core": ">= 8.0.0 < 12.0",
     "rxjs": ">= 6.5.0"
   }
 }
